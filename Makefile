@@ -1,8 +1,8 @@
-CC = gcc-4.9
-CFLAGS = -O2 -fopenmp
+CC = clang-10
+CFLAGS = -O3 -fopenmp -mvsx -maltivec -DSTREAM_ARRAY_SIZE=64000000 -DNTIMES=512
 
-FC = gfortran-4.9
-FFLAGS = -O2 -fopenmp
+FC = gfortran
+FFLAGS = -O3 -fopenmp
 
 all: stream_f.exe stream_c.exe
 
